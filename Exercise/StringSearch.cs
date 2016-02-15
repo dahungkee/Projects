@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise {
 	public class StringSearch {
-		static void Main(string[] args) {
-		}
+		
 
 		/// <summary>
 		/// Implement an algorithm to determine if a string has all unique characters.
