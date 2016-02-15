@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Exercise {
 	class permutation {
+		//Given two strings, write a method to decide if one is a permutation of the other. Test
 	}
 
-	//Given two strings, write a method to decide if one is a permutation of the other.
+	
 	
 
 }
