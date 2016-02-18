@@ -19,5 +19,10 @@ namespace UnitTest {
 		public void InputLenDiff() {
 			Assert.IsFalse(StringTools.IsStringPermutation("app", "apps"));
 		}
+
+		[TestMethod]
+		public void CaseDifferent() {
+			Assert.IsFalse(StringTools.IsStringPermutation("app", "apP"));
+		}
 	}
 }
