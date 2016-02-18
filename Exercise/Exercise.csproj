@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="factorial.cs" />
-    <Compile Include="permutation.cs" />
+    <Compile Include="StringTools.cs" />
     <Compile Include="program.cs" />
     <Compile Include="StringSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
