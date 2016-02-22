@@ -15,7 +15,11 @@ namespace UnitTest {
 		}
 		[TestMethod]
 		public void ReverseCharacterArray() {
-			CollectionAssert.AreEqual(Exercise.ReverseString.ReverseCharacterArray(new char[] { 'a', 'b', 'c', 'd' }), new char[] { 'd','c', 'b', 'a' }); 
+			CollectionAssert.AreEqual(Exercise.ReverseString.ReverseCharacterArray(new char[] { 'a', 'b', 'c', 'd', 'e' }), new char[] { 'e','d','c', 'b', 'a' }); 
+		}
+		[TestMethod]
+		public void ReverseCharArrayWithHubbyWay() {
+			CollectionAssert.AreEqual(Exercise.ReverseString.ReverseCharArrayWithHubbyWay(new char[] { 'a', 'b', 'c', 'd', 'e' }), new char[] { 'e', 'd', 'c', 'b', 'a' });
 		}
 	}
 }

@@ -36,6 +36,21 @@ namespace Exercise {
 				input[dest] = tempChar;			
 				dest++;				
 			}
+
+			return input;
+		}
+
+		public static char[] ReverseCharArrayWithHubbyWay(char[] input) {
+			int begin = 0;
+			int end = input.Length - 1;
+
+			while (begin < end) {
+				char tempChar = input[begin];
+				input[begin] = input[end];
+				input[end] = tempChar;
+				begin++;
+				end--;
+			}
 			return input;
 		}
 	}
