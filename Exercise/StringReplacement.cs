@@ -15,6 +15,8 @@ namespace Exercise {
 		 */
 
 		public static string ReplaceSpaces(string input) {
+			//advantage of using StringBuilder method is that we can keep appending items.
+			//disadvantage: slower then array char but array char requires to define number of elements
 			StringBuilder sb = new StringBuilder();
 
 			for (int i = 0; i < input.Length; i++) {
