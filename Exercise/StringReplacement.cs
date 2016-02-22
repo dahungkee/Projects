@@ -15,14 +15,35 @@ namespace Exercise {
 		 */
 
 		public static string ReplaceSpaces(string input) {
+			int spaceCount = 0;
+			foreach (char s in input.ToCharArray()) {
+				if (s == ' ') {
+					spaceCount++;
+				}
+			}
+			char[] inputData = new char[input.Length + (spaceCount * 2)];
+			int j = 0;
+			int curPos = 0;
+			for (int i = 0; i < input.Length; i++) {
+				if (input[i].ToString() == " ") {
+					inputData[curPos] = '%';
+					inputData[++curPos] = '2';
+					inputData[++curPos] = '0';
+				} else {
+					inputData[curPos] = input[i];
+				}
+				curPos++;
+			}
+
+			return new string(inputData);
 			//advantage of using StringBuilder method is that we can keep appending items.
 			//disadvantage: slower then array char but array char requires to define number of elements
-			StringBuilder sb = new StringBuilder();
+			//StringBuilder sb = new StringBuilder();
 
-			for (int i = 0; i < input.Length; i++) {
-				sb.Append(input[i].ToString() == " " ? "%20" : input[i].ToString());
-			}
-			return sb.ToString();
+			//for (int i = 0; i < input.Length; i++) {
+			//	sb.Append(input[i].ToString() == " " ? "%20" : input[i].ToString());
+			//}
+			//return input;
 		}
 	}
 }
