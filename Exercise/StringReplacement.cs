@@ -15,8 +15,12 @@ namespace Exercise {
 		 */
 
 		public static string ReplaceSpaces(string input) {
-			input = input.Replace(" ", "%20");
-			return input;
+			StringBuilder sb = new StringBuilder();
+
+			for (int i = 0; i < input.Length; i++) {
+				sb.Append(input[i].ToString() == " " ? "%20" : input[i].ToString());
+			}
+			return sb.ToString();
 		}
 	}
 }
