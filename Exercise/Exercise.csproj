@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="factorial.cs" />
     <Compile Include="ReverseString.cs" />
+    <Compile Include="StringCompression.cs" />
     <Compile Include="StringReplacement.cs" />
     <Compile Include="StringTools.cs" />
     <Compile Include="program.cs" />

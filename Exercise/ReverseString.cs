@@ -8,18 +8,35 @@ namespace Exercise {
 	public static class ReverseString {
 		/// <summary>
 		/// Implement a function void reverse(char* str) in C or C++ which reverses a nullterminated string.
-		/// I am implementing this in C# rather than C or C++.
+		/// I am implementing this in C# rather than C or C++. ABC
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
 		public static string ReverseStringInput(string input) {
+			//1. Easy way
+			//char[] inputData = input.ToCharArray();
+			//Array.Reverse(inputData);
+
+			//2. Mannually implement the reverse function
 			char[] inputData = new char[input.Length];
-			int j = 0;
-			for (int i = input.Length - 1; i >= 0; i--) {
-				inputData[j] = input[i];
-				j++;
+
+			int dest = 0;
+			for (int source = input.Length - 1; source >= 0; source--) {
+				inputData[dest] = input[source];
+				dest++;
 			}
 			return new string(inputData);
+		}
+
+		public static char[] ReverseCharacterArray(char[] input) {
+			int dest = 0;
+			for (int source = input.Length - 1; source >= input.Length / 2; source--) {
+				char tempChar = input[source];
+				input[source] = input[dest];
+				input[dest] = tempChar;			
+				dest++;				
+			}
+			return input;
 		}
 	}
 }
