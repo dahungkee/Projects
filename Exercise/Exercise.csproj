@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="factorial.cs" />
+    <Compile Include="StringReplacement.cs" />
     <Compile Include="StringTools.cs" />
     <Compile Include="program.cs" />
     <Compile Include="StringSearch.cs" />

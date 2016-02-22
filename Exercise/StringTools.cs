@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise {
 	public static class StringTools {
-		//Given two strings, write a method to decide if one is a permutation of the other. Test. Test Test.
+		//Given two strings, write a method to decide if one is a permutation of the other.
 		public static bool IsStringPermutation(string input1, string input2) {
 			if (input1.Length != input2.Length) {
 				return false;
