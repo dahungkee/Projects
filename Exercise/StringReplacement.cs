@@ -42,5 +42,23 @@ namespace Exercise {
 			}
 			return input;
 		}
+
+		public static char[] ReplaceSpacesWithHubbyWay(char[] input, int lengthOfString) {
+			int nextAvailPos = input.Length - 1;
+			for (int i = input.Length - 1; i >= 0; i--) {
+				if (input[i] != '\0') {
+					if (input[i] == ' ') {
+						input[nextAvailPos--] = '0';
+						input[nextAvailPos--] = '2';
+						input[nextAvailPos--] = '%';
+					} else {
+						input[nextAvailPos--] = input[i];
+					}
+				}
+				
+
+			}
+			return input;
+		}
 	}
 }

@@ -7,19 +7,19 @@ namespace UnitTest {
 	public class StringReplacementTests {
 		[TestMethod]
 		public void ReplaceAllSpaces() {
-			char[] testdata = new char[15];
+			char[] testdata = new char[9];
 			testdata[0] = 'a';
 			testdata[1] = ' ';
 			testdata[2] = 'b';
 			testdata[3] = ' ';
 			testdata[4] = 'c';
-			testdata[5] = ' ';
-			testdata[6] = 'd';
+			//testdata[5] = ' ';
+			//testdata[6] = 'd';
 
 
-			int lengthOfString = 7;
+			int lengthOfString = 3;
 
-			char[] actualResult = new char[15];
+			char[] actualResult = new char[9];
 			actualResult[0] = 'a';
 			actualResult[1] = '%';
 			actualResult[2] = '2';
@@ -29,12 +29,12 @@ namespace UnitTest {
 			actualResult[6] = '2';
 			actualResult[7] = '0';
 			actualResult[8] = 'c';
-			actualResult[9] = '%';
-			actualResult[10] = '2';
-			actualResult[11] = '0';
-			actualResult[12] = 'd';
+			//actualResult[9] = '%';
+			//actualResult[10] = '2';
+			//actualResult[11] = '0';
+			//actualResult[12] = 'd';
 
-			CollectionAssert.AreEqual(StringReplacement.ReplaceSpaces(testdata, lengthOfString), actualResult);			
+			CollectionAssert.AreEqual(StringReplacement.ReplaceSpacesWithHubbyWay(testdata, lengthOfString), actualResult);			
 		}
 	}
 }
