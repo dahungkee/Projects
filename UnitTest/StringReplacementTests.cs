@@ -17,7 +17,7 @@ namespace UnitTest {
 			//testdata[6] = 'd';
 
 
-			int lengthOfString = 3;
+			int lengthOfString = 5;
 
 			char[] actualResult = new char[9];
 			actualResult[0] = 'a';
