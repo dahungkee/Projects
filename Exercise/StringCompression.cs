@@ -16,6 +16,11 @@ namespace Exercise {
 		public static string StringCompressMethod(string input) {
 			StringBuilder sb = new StringBuilder();			
 			int count = 1;
+
+			if (string.IsNullOrEmpty(input)) {
+				return "";
+			}
+
 			string currentLetter = input[0].ToString();
 
 			for (int i = 1; i < input.Length; i++) {				
@@ -26,7 +31,7 @@ namespace Exercise {
 					currentLetter = input[i].ToString();
 					count = 1;
 				}
-				//last character.
+				//check for last character.
 				if (i == input.Length - 1) {
 					sb.Append(currentLetter + count);
 				}
