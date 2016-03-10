@@ -26,6 +26,7 @@ namespace Exercise {
 					currentLetter = input[i].ToString();
 					count = 1;
 				}
+				//last character.
 				if (i == input.Length - 1) {
 					sb.Append(currentLetter + count);
 				}
