@@ -18,7 +18,7 @@ namespace Exercise {
 			int count = 1;
 
 			if (string.IsNullOrEmpty(input)) {
-				return "";
+				return input;
 			}
 
 			string currentLetter = input[0].ToString();
