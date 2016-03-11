@@ -7,11 +7,23 @@ namespace UnitTest {
 	public class StringCompressionTests {
 		[TestMethod]
 		public void StringCompressTest() {
-			Assert.AreEqual(Exercise.StringCompression.StringCompressMethod("aabcccccaaa"), "a2b1c5a3");
+			Assert.AreEqual("a2b1c5a3", Exercise.StringCompression.StringCompressMethod("aabcccccaaa"));
 		}
 		[TestMethod]
-		public void StringCompressTest2() {
-			Assert.AreEqual(Exercise.StringCompression.StringCompressMethod("abc"), "abc");
+		public void ShorterInputTest() {
+			Assert.AreEqual("abc", Exercise.StringCompression.StringCompressMethod("abc"));
+		}
+		[TestMethod]
+		public void EmptyInputTest() {
+			Assert.AreEqual("", Exercise.StringCompression.StringCompressMethod(""));
+		}
+		[TestMethod]
+		public void OneLetterInputTest() {
+			Assert.AreEqual("ab", Exercise.StringCompression.StringCompressMethod("ab"));
+		}
+		[TestMethod]
+		public void OneLetterInputTest2() {
+			Assert.AreEqual("aab", Exercise.StringCompression.StringCompressMethod("aab"));
 		}
 	}
 }

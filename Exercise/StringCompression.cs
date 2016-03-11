@@ -14,29 +14,30 @@ namespace Exercise {
 		/// <param name="input"></param>
 		/// <returns></returns>
 		public static string StringCompressMethod(string input) {
-			StringBuilder sb = new StringBuilder();			
-			int count = 1;
-
+			
 			if (string.IsNullOrEmpty(input)) {
 				return input;
 			}
 
+			StringBuilder sb = new StringBuilder();
+			int count = 0;
 			string currentLetter = input[0].ToString();
 
-			for (int i = 1; i < input.Length; i++) {				
+			sb.Append(currentLetter);
+
+			for (int i = 0; i < input.Length; i++) {
 				if (currentLetter == input[i].ToString()) {
 					count++;					
-				} else {
-					sb.Append(currentLetter + count);
+				}
+				else {
 					currentLetter = input[i].ToString();
-					count = 1;
+					sb.Append(count + currentLetter);						
+					count = 1;														
 				}
-				//check for last character.
 				if (i == input.Length - 1) {
-					sb.Append(currentLetter + count);
+					sb.Append(count);
 				}
-			}
-
+			}			
 			return sb.Length > input.Length ? input : sb.ToString();
 		}
 	}
